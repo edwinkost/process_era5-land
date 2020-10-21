@@ -27,47 +27,47 @@ HOURLY_SOURCE_DIR=${MAIN_HOURLY_SOURCE_DIR}/Variable_Tpre
 DAILY_OUTPUT_FILE=${OUTPUT_FOLDER}/europe_era5-land_daily_total-preci_${YEAR}.nc
 cdo -L -b F64 -settime,00:00:00 -setunit,m.day-1      -daymax  -selyear,${YEAR} -shifttime,-25min -selvar,tp  -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
 
-# ssr, surface solar radiation
-HOURLY_SOURCE_DIR=${MAIN_HOURLY_SOURCE_DIR}/Variable_Snsr
-# - daily total, NOTE: using daymax (as hourly source data are accumulative on each day)
-DAILY_OUTPUT_FILE=${OUTPUT_FOLDER}/europe_era5-land_daily_total-ssrad_${YEAR}.nc
-cdo -L -b F64 -settime,00:00:00 -setunit,J.m-2.day-1  -daymax  -selyear,${YEAR} -shifttime,-25min -selvar,ssr -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
+#~ # ssr, surface solar radiation
+#~ HOURLY_SOURCE_DIR=${MAIN_HOURLY_SOURCE_DIR}/Variable_Snsr
+#~ # - daily total, NOTE: using daymax (as hourly source data are accumulative on each day)
+#~ DAILY_OUTPUT_FILE=${OUTPUT_FOLDER}/europe_era5-land_daily_total-ssrad_${YEAR}.nc
+#~ cdo -L -b F64 -settime,00:00:00 -setunit,J.m-2.day-1  -daymax  -selyear,${YEAR} -shifttime,-25min -selvar,ssr -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
 
-# d2m
-HOURLY_SOURCE_DIR=${MAIN_HOURLY_SOURCE_DIR}/Variable_Temp
-# - maximum
-DAILY_OUTPUT_FILE=${OUTPUT_FOLDER}/europe_era5-land_daily_d2m-maximum_${YEAR}.nc
-cdo -L -b F64 -settime,00:00:00 -setunit,K            -daymax  -selyear,${YEAR} -shifttime,-25min -selvar,d2m -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
-# - mean
-DAILY_OUTPUT_FILE=${OUTPUT_FOLDER}/europe_era5-land_daily_d2m-average_${YEAR}.nc
-cdo -L -b F64 -settime,00:00:00 -setunit,K            -daymean -selyear,${YEAR} -shifttime,-25min -selvar,d2m -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
-# - minimum
-DAILY_OUTPUT_FILE=${OUTPUT_FOLDER}/europe_era5-land_daily_d2m-minimum_${YEAR}.nc
-cdo -L -b F64 -settime,00:00:00 -setunit,K            -daymin  -selyear,${YEAR} -shifttime,-25min -selvar,d2m -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
+#~ # d2m
+#~ HOURLY_SOURCE_DIR=${MAIN_HOURLY_SOURCE_DIR}/Variable_Temp
+#~ # - maximum
+#~ DAILY_OUTPUT_FILE=${OUTPUT_FOLDER}/europe_era5-land_daily_d2m-maximum_${YEAR}.nc
+#~ cdo -L -b F64 -settime,00:00:00 -setunit,K            -daymax  -selyear,${YEAR} -shifttime,-25min -selvar,d2m -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
+#~ # - mean
+#~ DAILY_OUTPUT_FILE=${OUTPUT_FOLDER}/europe_era5-land_daily_d2m-average_${YEAR}.nc
+#~ cdo -L -b F64 -settime,00:00:00 -setunit,K            -daymean -selyear,${YEAR} -shifttime,-25min -selvar,d2m -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
+#~ # - minimum
+#~ DAILY_OUTPUT_FILE=${OUTPUT_FOLDER}/europe_era5-land_daily_d2m-minimum_${YEAR}.nc
+#~ cdo -L -b F64 -settime,00:00:00 -setunit,K            -daymin  -selyear,${YEAR} -shifttime,-25min -selvar,d2m -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
 
-# t2m
-HOURLY_SOURCE_DIR=${MAIN_HOURLY_SOURCE_DIR}/Variable_Temp
-# - maximum
-DAILY_OUTPUT_FILE=${OUTPUT_FOLDER}/europe_era5-land_daily_t2m-maximum_${YEAR}.nc
-cdo -L -b F64 -settime,00:00:00 -setunit,K            -daymax  -selyear,${YEAR} -shifttime,-25min -selvar,t2m -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
-# - mean
-DAILY_OUTPUT_FILE=${OUTPUT_FOLDER}/europe_era5-land_daily_t2m-average_${YEAR}.nc
-cdo -L -b F64 -settime,00:00:00 -setunit,K            -daymean -selyear,${YEAR} -shifttime,-25min -selvar,t2m -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
-# - minimum
-DAILY_OUTPUT_FILE=${OUTPUT_FOLDER}/europe_era5-land_daily_t2m-minimum_${YEAR}.nc
-cdo -L -b F64 -settime,00:00:00 -setunit,K            -daymin  -selyear,${YEAR} -shifttime,-25min -selvar,t2m -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
+#~ # t2m
+#~ HOURLY_SOURCE_DIR=${MAIN_HOURLY_SOURCE_DIR}/Variable_Temp
+#~ # - maximum
+#~ DAILY_OUTPUT_FILE=${OUTPUT_FOLDER}/europe_era5-land_daily_t2m-maximum_${YEAR}.nc
+#~ cdo -L -b F64 -settime,00:00:00 -setunit,K            -daymax  -selyear,${YEAR} -shifttime,-25min -selvar,t2m -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
+#~ # - mean
+#~ DAILY_OUTPUT_FILE=${OUTPUT_FOLDER}/europe_era5-land_daily_t2m-average_${YEAR}.nc
+#~ cdo -L -b F64 -settime,00:00:00 -setunit,K            -daymean -selyear,${YEAR} -shifttime,-25min -selvar,t2m -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
+#~ # - minimum
+#~ DAILY_OUTPUT_FILE=${OUTPUT_FOLDER}/europe_era5-land_daily_t2m-minimum_${YEAR}.nc
+#~ cdo -L -b F64 -settime,00:00:00 -setunit,K            -daymin  -selyear,${YEAR} -shifttime,-25min -selvar,t2m -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
 
-# fal
-HOURLY_SOURCE_DIR=${MAIN_HOURLY_SOURCE_DIR}/Variable_Falb
-# - mean
-DAILY_OUTPUT_FILE=${OUTPUT_FOLDER}/europe_era5-land_daily_fal-average_${YEAR}.nc
-cdo -L -b F64 -settime,00:00:00 -setunit,dimensionless -daymean -selyear,${YEAR} -shifttime,-25min -selvar,fal -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
+#~ # fal
+#~ HOURLY_SOURCE_DIR=${MAIN_HOURLY_SOURCE_DIR}/Variable_Falb
+#~ # - mean
+#~ DAILY_OUTPUT_FILE=${OUTPUT_FOLDER}/europe_era5-land_daily_fal-average_${YEAR}.nc
+#~ cdo -L -b F64 -settime,00:00:00 -setunit,dimensionless -daymean -selyear,${YEAR} -shifttime,-25min -selvar,fal -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
 
-# sp
-HOURLY_SOURCE_DIR=${MAIN_HOURLY_SOURCE_DIR}/Variable_Spre
-# - mean
-DAILY_OUTPUT_FILE=${OUTPUT_FOLDER}/europe_era5-land_daily_spressu-avg_${YEAR}.nc
-cdo -L -b F64 -settime,00:00:00 -setunit,Pa            -daymean -selyear,${YEAR} -shifttime,-25min -selvar,sp  -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
+#~ # sp
+#~ HOURLY_SOURCE_DIR=${MAIN_HOURLY_SOURCE_DIR}/Variable_Spre
+#~ # - mean
+#~ DAILY_OUTPUT_FILE=${OUTPUT_FOLDER}/europe_era5-land_daily_spressu-avg_${YEAR}.nc
+#~ cdo -L -b F64 -settime,00:00:00 -setunit,Pa            -daymean -selyear,${YEAR} -shifttime,-25min -selvar,sp  -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
 
 wait
 
