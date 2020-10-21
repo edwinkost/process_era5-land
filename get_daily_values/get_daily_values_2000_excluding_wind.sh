@@ -2,7 +2,7 @@
 set -x
 
 YEAR=2017
-YEAR_PLUS_1=2018
+YEAR_PLUS_1=$(( YEAR + 1 ))
 
 OUTPUT_FOLDER="/scratch/depfg/sutan101/test_arise_meteo_europe/daily_before_remapcon/"
 mkdir -p ${OUTPUT_FOLDER}
