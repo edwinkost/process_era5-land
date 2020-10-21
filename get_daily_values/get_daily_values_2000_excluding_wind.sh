@@ -4,6 +4,10 @@ set -x
 YEAR=2017
 YEAR_PLUS_1=2018
 
+DAILY_OUTPUT_FOLDER="/scratch/depfg/sutan101/test_arise_meteo_europe/daily/"
+mkdir -p ${DAILY_OUTPUT_FOLDER}
+cd ${DAILY_OUTPUT_FOLDER}
+
 MAIN_HOURLY_SOURCE_DIR="/scratch/depfg/hoch0001/ARISE/ERA5_Land/_data/hourly/"
 
 #~ (pcrglobwb_python3) sutan101@gpu040.cluster:/scratch/depfg/hoch0001/ARISE/ERA5_Land/_data/hourly$ ls -lah
@@ -16,10 +20,6 @@ MAIN_HOURLY_SOURCE_DIR="/scratch/depfg/hoch0001/ARISE/ERA5_Land/_data/hourly/"
 #~ drwxr-xr-x 2 hoch0001 depfg 468 Oct 19 03:09 Variable_Temp
 #~ drwxr-xr-x 2 hoch0001 depfg 468 Oct 18 21:12 Variable_Tpre
 #~ drwxr-xr-x 2 hoch0001 depfg 468 Oct 19 03:11 Variable_Wind
-
-DAILY_OUTPUT_FOLDER="/scratch-shared/edwinhs/test_arise_meteo_europe/daily/"
-mkdir -p ${DAILY_OUTPUT_FOLDER}
-cd ${DAILY_OUTPUT_FOLDER}
 
 # tp, total precipitation
 HOURLY_SOURCE_DIR=${MAIN_HOURLY_SOURCE_DIR}/Variable_Tpre
