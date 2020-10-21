@@ -4,9 +4,9 @@ set -x
 YEAR=2017
 YEAR_PLUS_1=2018
 
-DAILY_OUTPUT_FOLDER="/scratch/depfg/sutan101/test_arise_meteo_europe/daily/"
-mkdir -p ${DAILY_OUTPUT_FOLDER}
-cd ${DAILY_OUTPUT_FOLDER}
+OUTPUT_FOLDER="/scratch/depfg/sutan101/test_arise_meteo_europe/daily_before_remapcon/"
+mkdir -p ${OUTPUT_FOLDER}
+cd ${OUTPUT_FOLDER}
 
 MAIN_HOURLY_SOURCE_DIR="/scratch/depfg/hoch0001/ARISE/ERA5_Land/_data/hourly/"
 
