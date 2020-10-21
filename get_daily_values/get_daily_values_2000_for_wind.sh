@@ -71,10 +71,11 @@ MAIN_HOURLY_SOURCE_DIR="/scratch/depfg/hoch0001/ARISE/ERA5_Land/_data/hourly/"
 # - calculate hourly wind speed
 # - calculate daily value
 
-# calculate hourly wind speed (with expression)
+# calculate hourly wind speed
 HOURLY_SOURCE_DIR=${MAIN_HOURLY_SOURCE_DIR}/Variable_Wind
+# - mean and involving expression: 'wind_speed_10m = sqrt(u10*u10 + v10*v10)'
 DAILY_OUTPUT_FILE=${OUTPUT_FOLDER}/europe_era5-land_daily_wind10m-avg_${YEAR}.nc
-cdo -L -setunit,"m.s-1" -daymean -expr,'wind_speed_10m = sqrt(u10*u10 + v10*v10)' -selyear,${YEAR} -shifttime,-25min -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
+cdo -L -b F64 -settime,00:00:00 -setname,"wind_speed_10m" -setunit,"m.s-1" -daymean -expr,'wind_speed_10m = sqrt(u10*u10 + v10*v10)' -selyear,${YEAR} -shifttime,-25min -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
 
 wait
 

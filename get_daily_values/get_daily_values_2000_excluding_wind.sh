@@ -69,6 +69,12 @@ HOURLY_SOURCE_DIR=${MAIN_HOURLY_SOURCE_DIR}/Variable_Spre
 DAILY_OUTPUT_FILE=${OUTPUT_FOLDER}/europe_era5-land_daily_spressu-avg_${YEAR}.nc
 cdo -L -b F64 -settime,00:00:00 -setunit,Pa            -daymean -selyear,${YEAR} -shifttime,-25min -selvar,sp  -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
 
+#~ # calculate hourly wind speed
+#~ HOURLY_SOURCE_DIR=${MAIN_HOURLY_SOURCE_DIR}/Variable_Wind
+#~ # - mean and involving expression: 'wind_speed_10m = sqrt(u10*u10 + v10*v10)'
+#~ DAILY_OUTPUT_FILE=${OUTPUT_FOLDER}/europe_era5-land_daily_wind10m-avg_${YEAR}.nc
+#~ cdo -L -setname,"wind_speed_10m" -setunit,"m.s-1" -daymean -expr,'wind_speed_10m = sqrt(u10*u10 + v10*v10)' -selyear,${YEAR} -shifttime,-25min -mergetime ${HOURLY_SOURCE_DIR}/*${YEAR}*.nc ${HOURLY_SOURCE_DIR}/*${YEAR_PLUS_1}01.nc ${DAILY_OUTPUT_FILE} &
+
 wait
 
 set +x
