@@ -4,5 +4,4 @@ OUTPUT_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_example/A
 
 bash get_daily_values_all.sh ${MAIN_HOURLY_SOURCE_DIR} ${OUTPUT_FOLDER} 1981
 bash get_daily_values_all.sh ${MAIN_HOURLY_SOURCE_DIR} ${OUTPUT_FOLDER} 1982 
-bash get_daily_values_all.sh ${MAIN_HOURLY_SOURCE_DIR} ${OUTPUT_FOLDER} 1983
 
