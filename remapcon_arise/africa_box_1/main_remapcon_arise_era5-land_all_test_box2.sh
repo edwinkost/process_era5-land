@@ -4,7 +4,7 @@ set -x
 
 #~ INP_FOLDER="/scratch-shared/edwinhs/meteo_arise/tanzania/source_icl_downloaded_2020-04-07/era5-land/"
 #~ INP_FOLDER="/rds/general/user/ec407/ephemeral/Senegal/ForEdwin/"
-INP_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_example/Africa-box1/daily_before_remapcon/"
+INP_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_example/Africa-box2/daily_before_remapcon/"
 
 #~ esutanud@login-7:/rds/general/user/esutanud/ephemeral/meteo_arise/africa_example/Africa-box1/daily_before_remapcon$ ls -lah *
 #~ -rw------- 1 esutanud hpc-ec407 682M Oct 23 02:00 era5-land_daily_d2m-average_1981.nc
@@ -20,7 +20,7 @@ INP_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_example/Afri
 #~ -rw------- 1 esutanud hpc-ec407 672M Oct 23 02:01 era5-land_daily_wind10m-avg_1981.nc
 
 #~ OUT_FOLDER="/scratch-shared/edwinhs/meteo_arise/tanzania/version_2020-04-07/era5-land/"
-OUT_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_example/Africa-box1/daily_after_remapcon/test/"
+OUT_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_example/Africa-box2/daily_after_remapcon/test/"
 
 # making output folder 
 mkdir -p ${OUT_FOLDER}
