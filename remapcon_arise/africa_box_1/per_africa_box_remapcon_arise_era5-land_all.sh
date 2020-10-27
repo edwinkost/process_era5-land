@@ -28,7 +28,7 @@ INP_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_example/Afri
 
 
 #~ OUT_FOLDER="/scratch-shared/edwinhs/meteo_arise/tanzania/version_2020-04-07/era5-land/"
-OUT_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_example/Africa-box1/daily_after_remapcon/test/"
+OUT_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_example/Africa-box1/daily_after_remapcon/test_all_variables/"
 
 
 # making output folder 
