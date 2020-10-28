@@ -20,12 +20,16 @@ OUTPUT_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_example/a
 
 mkdir -p ${OUTPUT_FOLDER}
 
+rm -r ${OUTPUT_FOLDER}/*
+
 INP_FILENAME="era5-land_daily_total-preci/era5-land_daily_total-preci_rempacon-150-arcsec_daily.nc"
+
 OUT_FILENAME=${OUTPUT_FOLDER}/"africa_era5-land_daily_total-preci_rempacon-150-arcsec_daily.nc"
 
 BOX1_FILENAME=${MAIN_INPUT_FOLDER}"/Africa-box1/daily_after_remapcon/test_all_variables/150_arcsec/${INP_FILENAME}"
 BOX2_FILENAME=${MAIN_INPUT_FOLDER}"/Africa-box2/daily_after_remapcon/test_all_variables/150_arcsec/${INP_FILENAME}"
-BOX3_FILENAME=${MAIN_INPUT_FOLDER}"/Africa-box2/daily_after_remapcon/test_all_variables/150_arcsec/${INP_FILENAME}"
+BOX3_FILENAME=${MAIN_INPUT_FOLDER}"/Africa-box3/daily_after_remapcon/test_all_variables/150_arcsec/${INP_FILENAME}"
+BOX3_FILENAME=${MAIN_INPUT_FOLDER}"/Africa-box3/daily_after_remapcon/test_all_variables/150_arcsec/${INP_FILENAME}"
 
 cdo -L -mergegrid ${BOX3_FILENAME} -mergegrid ${BOX1_FILENAME} ${BOX2_FILENAME} ${OUT_FILENAME}
 
