@@ -20,7 +20,7 @@ OUTPUT_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_example/a
 
 mkdir -p ${OUTPUT_FOLDER}
 
-rm -r ${OUTPUT_FOLDER}/*
+#~ rm -r ${OUTPUT_FOLDER}/*
 
 INP_FILENAME="era5-land_daily_total-preci/era5-land_daily_total-preci_rempacon-150-arcsec_daily.nc"
 
