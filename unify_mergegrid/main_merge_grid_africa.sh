@@ -2,7 +2,7 @@
 set -x
 
 OUT_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_example/africa_merged/complete_test/"
-INP_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_example/africa_example/"
+INP_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_example/"
 
 bash merge_grid_africa.sh ${INP_FOLDER} ${OUT_FOLDER} era5-land_daily_d2m-average
 bash merge_grid_africa.sh ${INP_FOLDER} ${OUT_FOLDER} era5-land_daily_d2m-maximum
