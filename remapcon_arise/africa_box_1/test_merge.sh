@@ -31,6 +31,10 @@ BOX2_FILENAME=${MAIN_INPUT_FOLDER}"/Africa-box2/daily_after_remapcon/test_all_va
 BOX3_FILENAME=${MAIN_INPUT_FOLDER}"/Africa-box3/daily_after_remapcon/test_all_variables/150_arcsec/${INP_FILENAME}"
 BOX3_FILENAME=${MAIN_INPUT_FOLDER}"/Africa-box3/daily_after_remapcon/test_all_variables/150_arcsec/${INP_FILENAME}"
 
-cdo -L -mergegrid ${BOX3_FILENAME} -mergegrid ${BOX1_FILENAME} ${BOX2_FILENAME} ${OUT_FILENAME}
+cdo -L -mergegrid ${BOX3_FILENAME} -mergegrid ${BOX1_FILENAME} ${BOX2_FILENAME} ${OUT_FILENAME} &
+
+
+wait
+
 
 set +x
