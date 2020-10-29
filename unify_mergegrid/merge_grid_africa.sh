@@ -73,7 +73,7 @@ MONTHLY_OUTPUT_FOLDER=${OUTPUT_FOLDER}/monthly/
 mkdir -p ${MONTHLY_OUTPUT_FOLDER}
 
 INP_FILENAME="era5-land_daily_total-preci/era5-land_daily_total-preci_rempacon-150-arcsec_monthly.nc"
-INP_FILENAME=$3/$3_rempacon-150-arcsec_daily.nc
+INP_FILENAME=$3/$3_rempacon-150-arcsec_monthly.nc
 
 OUT_FILENAME=${MONTHLY_OUTPUT_FOLDER}/"africa_era5-land_daily_total-preci_rempacon-150-arcsec_monthly.nc"
 OUT_FILENAME=${MONTHLY_OUTPUT_FOLDER}/africa_$3_rempacon-150-arcsec_monthly.nc
