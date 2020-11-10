@@ -44,6 +44,8 @@ OUTPUT_FOLDER="/scratch/depfg/sutan101/meteo_europe_era5land/daily_before_remapc
 #~ (pcrglobwb_python3) sutan101@gpu040.cluster:/scratch/depfg/sutan101/meteo_europe_era5land/daily_before_remapcon$ ls -lah *2019*
 #~ ls: cannot access *2019*: No such file or directory
 
+set -x
+
 cd ${OUTPUT_FOLDER}
 
 mkdir merged_1981-2018
@@ -63,3 +65,4 @@ cdo -L -mergetime ../era5-land_daily_wind10m-avg_*.nc era5-land_daily_wind10m-av
 
 wait
 
+set +x
