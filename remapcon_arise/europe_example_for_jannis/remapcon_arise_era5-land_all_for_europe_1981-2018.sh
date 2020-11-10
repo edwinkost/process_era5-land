@@ -109,39 +109,39 @@ mapattr -s -R 4800 -C 6360 -B -P yb2t -x -11 -y 73 -l 0.008333333333333333333333
 
 bash remapcon_arise_era5.sh ${INP_FOLDER} era5-land_daily_total-preci_1981-2018.nc ${OUT_FOLDER} europe_era5-land_daily_total-preci monsum  "m.month-1"   ${CLONE30SEC_FILE} &
 
-bash remapcon_arise_era5.sh ${INP_FOLDER} era5-land_daily_d2m-average_1981-2018.nc ${OUT_FOLDER} europe_era5-land_daily_d2m-average monmean "K"           ${CLONE30SEC_FILE} &
-bash remapcon_arise_era5.sh ${INP_FOLDER} era5-land_daily_d2m-maximum_1981-2018.nc ${OUT_FOLDER} europe_era5-land_daily_d2m-maximum monmean "K"           ${CLONE30SEC_FILE} &
-bash remapcon_arise_era5.sh ${INP_FOLDER} era5-land_daily_d2m-minimum_1981-2018.nc ${OUT_FOLDER} europe_era5-land_daily_d2m-minimum monmean "K"           ${CLONE30SEC_FILE} &
+#~ bash remapcon_arise_era5.sh ${INP_FOLDER} era5-land_daily_d2m-average_1981-2018.nc ${OUT_FOLDER} europe_era5-land_daily_d2m-average monmean "K"           ${CLONE30SEC_FILE} &
+#~ bash remapcon_arise_era5.sh ${INP_FOLDER} era5-land_daily_d2m-maximum_1981-2018.nc ${OUT_FOLDER} europe_era5-land_daily_d2m-maximum monmean "K"           ${CLONE30SEC_FILE} &
+#~ bash remapcon_arise_era5.sh ${INP_FOLDER} era5-land_daily_d2m-minimum_1981-2018.nc ${OUT_FOLDER} europe_era5-land_daily_d2m-minimum monmean "K"           ${CLONE30SEC_FILE} &
 
-bash remapcon_arise_era5.sh ${INP_FOLDER} era5-land_daily_t2m-average_1981-2018.nc ${OUT_FOLDER} europe_era5-land_daily_t2m-average monmean "K"           ${CLONE30SEC_FILE} &
-bash remapcon_arise_era5.sh ${INP_FOLDER} era5-land_daily_t2m-maximum_1981-2018.nc ${OUT_FOLDER} europe_era5-land_daily_t2m-maximum monmean "K"           ${CLONE30SEC_FILE} &
-bash remapcon_arise_era5.sh ${INP_FOLDER} era5-land_daily_t2m-minimum_1981-2018.nc ${OUT_FOLDER} europe_era5-land_daily_t2m-minimum monmean "K"           ${CLONE30SEC_FILE} &
+#~ bash remapcon_arise_era5.sh ${INP_FOLDER} era5-land_daily_t2m-average_1981-2018.nc ${OUT_FOLDER} europe_era5-land_daily_t2m-average monmean "K"           ${CLONE30SEC_FILE} &
+#~ bash remapcon_arise_era5.sh ${INP_FOLDER} era5-land_daily_t2m-maximum_1981-2018.nc ${OUT_FOLDER} europe_era5-land_daily_t2m-maximum monmean "K"           ${CLONE30SEC_FILE} &
+#~ bash remapcon_arise_era5.sh ${INP_FOLDER} era5-land_daily_t2m-minimum_1981-2018.nc ${OUT_FOLDER} europe_era5-land_daily_t2m-minimum monmean "K"           ${CLONE30SEC_FILE} &
 
-bash remapcon_arise_era5.sh ${INP_FOLDER} era5-land_daily_spressu-avg_1981-2018.nc ${OUT_FOLDER} europe_era5-land_daily_spressu-avg monmean "1"           ${CLONE30SEC_FILE} &
+#~ bash remapcon_arise_era5.sh ${INP_FOLDER} era5-land_daily_spressu-avg_1981-2018.nc ${OUT_FOLDER} europe_era5-land_daily_spressu-avg monmean "1"           ${CLONE30SEC_FILE} &
 
-bash remapcon_arise_era5.sh ${INP_FOLDER} era5-land_daily_fal-average_1981-2018.nc ${OUT_FOLDER} europe_era5-land_daily_fal-average monmean "1"           ${CLONE30SEC_FILE} &
+#~ bash remapcon_arise_era5.sh ${INP_FOLDER} era5-land_daily_fal-average_1981-2018.nc ${OUT_FOLDER} europe_era5-land_daily_fal-average monmean "1"           ${CLONE30SEC_FILE} &
 
-bash remapcon_arise_era5.sh ${INP_FOLDER} era5-land_daily_total-ssrad_1981-2018.nc ${OUT_FOLDER} europe_era5-land_daily_total-ssrad monmean "J.m-2.day-1" ${CLONE30SEC_FILE} &
+#~ bash remapcon_arise_era5.sh ${INP_FOLDER} era5-land_daily_total-ssrad_1981-2018.nc ${OUT_FOLDER} europe_era5-land_daily_total-ssrad monmean "J.m-2.day-1" ${CLONE30SEC_FILE} &
 
-bash remapcon_arise_era5.sh ${INP_FOLDER} era5-land_daily_wind10m-avg_1981-2018.nc ${OUT_FOLDER} europe_era5-land_daily_wind10m-avg monmean "m.s-1"       ${CLONE30SEC_FILE} &
+#~ bash remapcon_arise_era5.sh ${INP_FOLDER} era5-land_daily_wind10m-avg_1981-2018.nc ${OUT_FOLDER} europe_era5-land_daily_wind10m-avg monmean "m.s-1"       ${CLONE30SEC_FILE} &
 
 wait
 
-(pcrglobwb_python3) sutan101@gpu040.cluster:/scratch/depfg/sutan101/meteo_europe_era5land/daily_before_remapcon/merged_1981-2018$ ls -lah
-total 243G
-drwxr-xr-x 2 sutan101 depfg  11 Nov 10 22:34 .
-drwxr-xr-x 3 sutan101 depfg 419 Nov 10 22:30 ..
--rw-r--r-- 1 sutan101 depfg 23G Nov 10 22:50 era5-land_daily_d2m-average_1981-2018.nc
--rw-r--r-- 1 sutan101 depfg 23G Nov 10 22:50 era5-land_daily_d2m-maximum_1981-2018.nc
--rw-r--r-- 1 sutan101 depfg 23G Nov 10 22:50 era5-land_daily_d2m-minimum_1981-2018.nc
--rw-r--r-- 1 sutan101 depfg 23G Nov 10 22:53 era5-land_daily_fal-average_1981-2018.nc
--rw-r--r-- 1 sutan101 depfg 23G Nov 10 22:53 era5-land_daily_spressu-avg_1981-2018.nc
--rw-r--r-- 1 sutan101 depfg 23G Nov 10 22:53 era5-land_daily_t2m-average_1981-2018.nc
--rw-r--r-- 1 sutan101 depfg 23G Nov 10 22:50 era5-land_daily_t2m-maximum_1981-2018.nc
--rw-r--r-- 1 sutan101 depfg 23G Nov 10 22:53 era5-land_daily_t2m-minimum_1981-2018.nc
--rw-r--r-- 1 sutan101 depfg 23G Nov 10 22:50 era5-land_daily_total-preci_1981-2018.nc
--rw-r--r-- 1 sutan101 depfg 23G Nov 10 22:53 era5-land_daily_total-ssrad_1981-2018.nc
--rw-r--r-- 1 sutan101 depfg 23G Nov 10 22:50 era5-land_daily_wind10m-avg_1981-2018.nc
+#~ (pcrglobwb_python3) sutan101@gpu040.cluster:/scratch/depfg/sutan101/meteo_europe_era5land/daily_before_remapcon/merged_1981-2018$ ls -lah
+#~ total 243G
+#~ drwxr-xr-x 2 sutan101 depfg  11 Nov 10 22:34 .
+#~ drwxr-xr-x 3 sutan101 depfg 419 Nov 10 22:30 ..
+#~ -rw-r--r-- 1 sutan101 depfg 23G Nov 10 22:50 era5-land_daily_d2m-average_1981-2018.nc
+#~ -rw-r--r-- 1 sutan101 depfg 23G Nov 10 22:50 era5-land_daily_d2m-maximum_1981-2018.nc
+#~ -rw-r--r-- 1 sutan101 depfg 23G Nov 10 22:50 era5-land_daily_d2m-minimum_1981-2018.nc
+#~ -rw-r--r-- 1 sutan101 depfg 23G Nov 10 22:53 era5-land_daily_fal-average_1981-2018.nc
+#~ -rw-r--r-- 1 sutan101 depfg 23G Nov 10 22:53 era5-land_daily_spressu-avg_1981-2018.nc
+#~ -rw-r--r-- 1 sutan101 depfg 23G Nov 10 22:53 era5-land_daily_t2m-average_1981-2018.nc
+#~ -rw-r--r-- 1 sutan101 depfg 23G Nov 10 22:50 era5-land_daily_t2m-maximum_1981-2018.nc
+#~ -rw-r--r-- 1 sutan101 depfg 23G Nov 10 22:53 era5-land_daily_t2m-minimum_1981-2018.nc
+#~ -rw-r--r-- 1 sutan101 depfg 23G Nov 10 22:50 era5-land_daily_total-preci_1981-2018.nc
+#~ -rw-r--r-- 1 sutan101 depfg 23G Nov 10 22:53 era5-land_daily_total-ssrad_1981-2018.nc
+#~ -rw-r--r-- 1 sutan101 depfg 23G Nov 10 22:50 era5-land_daily_wind10m-avg_1981-2018.nc
 
 
 set +x
