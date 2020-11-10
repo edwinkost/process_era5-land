@@ -1,10 +1,21 @@
+#!/bin/bash
+#SBATCH -N 1
+#SBATCH -n 8
+#~ #SBATCH -t 240:00:00
+#SBATCH -p defq
+
+#SBATCH -J get_daily_values
+
+#~ #SBATCH --exclusive
 
 # do not forget to load the modules required
+. load_my_miniconda_and_my_default_env.sh
 
-
-
-MAIN_HOURLY_SOURCE_DIR="/scratch/depfg/hoch0001/ARISE/ERA5_Land/_data/hourly/"
+# set the folder where you want to store daily files (note that these daily files will still need further processing)
 OUTPUT_FOLDER="/scratch/depfg/sutan101/meteo_arise/europe_example/daily_before_remapcon/"
+
+# folder where you stored hourly files (downloaded files from the copernicus)
+MAIN_HOURLY_SOURCE_DIR="/scratch/depfg/hoch0001/ARISE/ERA5_Land/_data/hourly/"
 
 #~ sutan101@gpu040.cluster:/scratch/depfg/hoch0001/ARISE/ERA5_Land/_data/hourly$ ls -lah
 #~ total 4.0K
@@ -20,4 +31,4 @@ OUTPUT_FOLDER="/scratch/depfg/sutan101/meteo_arise/europe_example/daily_before_r
 bash get_daily_values_all.sh ${MAIN_HOURLY_SOURCE_DIR} ${OUTPUT_FOLDER} 1981
 bash get_daily_values_all.sh ${MAIN_HOURLY_SOURCE_DIR} ${OUTPUT_FOLDER} 1982 
 
-# Please extend
+# Please extend to other years
