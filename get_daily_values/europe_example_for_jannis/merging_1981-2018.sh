@@ -49,17 +49,17 @@ cd ${OUTPUT_FOLDER}
 mkdir merged_1981-2018
 cd merged_1981-2018
 
-cdo -L -mergetime ,,/era5-land_daily_d2m-average_*.nc era5-land_daily_d2m-average_1981-2018.nc &
-cdo -L -mergetime ,,/era5-land_daily_d2m-maximum_*.nc era5-land_daily_d2m-maximum_1981-2018.nc &
-cdo -L -mergetime ,,/era5-land_daily_d2m-minimum_*.nc era5-land_daily_d2m-minimum_1981-2018.nc &
-cdo -L -mergetime ,,/era5-land_daily_fal-average_*.nc era5-land_daily_fal-average_1981-2018.nc &
-cdo -L -mergetime ,,/era5-land_daily_spressu-avg_*.nc era5-land_daily_spressu-avg_1981-2018.nc &
-cdo -L -mergetime ,,/era5-land_daily_t2m-average_*.nc era5-land_daily_t2m-average_1981-2018.nc &
-cdo -L -mergetime ,,/era5-land_daily_t2m-maximum_*.nc era5-land_daily_t2m-maximum_1981-2018.nc &
-cdo -L -mergetime ,,/era5-land_daily_t2m-minimum_*.nc era5-land_daily_t2m-minimum_1981-2018.nc &
-cdo -L -mergetime ,,/era5-land_daily_total-preci_*.nc era5-land_daily_total-preci_1981-2018.nc &
-cdo -L -mergetime ,,/era5-land_daily_total-ssrad_*.nc era5-land_daily_total-ssrad_1981-2018.nc &
-cdo -L -mergetime ,,/era5-land_daily_wind10m-avg_*.nc era5-land_daily_wind10m-avg_1981-2018.nc &
+cdo -L -mergetime ../era5-land_daily_d2m-average_*.nc era5-land_daily_d2m-average_1981-2018.nc &
+cdo -L -mergetime ../era5-land_daily_d2m-maximum_*.nc era5-land_daily_d2m-maximum_1981-2018.nc &
+cdo -L -mergetime ../era5-land_daily_d2m-minimum_*.nc era5-land_daily_d2m-minimum_1981-2018.nc &
+cdo -L -mergetime ../era5-land_daily_fal-average_*.nc era5-land_daily_fal-average_1981-2018.nc &
+cdo -L -mergetime ../era5-land_daily_spressu-avg_*.nc era5-land_daily_spressu-avg_1981-2018.nc &
+cdo -L -mergetime ../era5-land_daily_t2m-average_*.nc era5-land_daily_t2m-average_1981-2018.nc &
+cdo -L -mergetime ../era5-land_daily_t2m-maximum_*.nc era5-land_daily_t2m-maximum_1981-2018.nc &
+cdo -L -mergetime ../era5-land_daily_t2m-minimum_*.nc era5-land_daily_t2m-minimum_1981-2018.nc &
+cdo -L -mergetime ../era5-land_daily_total-preci_*.nc era5-land_daily_total-preci_1981-2018.nc &
+cdo -L -mergetime ../era5-land_daily_total-ssrad_*.nc era5-land_daily_total-ssrad_1981-2018.nc &
+cdo -L -mergetime ../era5-land_daily_wind10m-avg_*.nc era5-land_daily_wind10m-avg_1981-2018.nc &
 
 wait
 
