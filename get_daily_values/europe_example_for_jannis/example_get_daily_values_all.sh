@@ -8,11 +8,11 @@
 
 #~ #SBATCH --exclusive
 
-# do not forget to load the modules required
+# do not forget to load the module required (i.e. cdo)
 . load_my_miniconda_and_my_default_env.sh
 
 # set the folder where you want to store daily files (note that these daily files will still need further processing)
-OUTPUT_FOLDER="/scratch/depfg/sutan101/meteo_arise/europe_example/daily_before_remapcon/"
+OUTPUT_FOLDER="/scratch/depfg/sutan101/test_arise_meteo_europe_demo/daily_before_remapcon/"
 
 # folder where you stored hourly files (downloaded files from the copernicus)
 MAIN_HOURLY_SOURCE_DIR="/scratch/depfg/hoch0001/ARISE/ERA5_Land/_data/hourly/"
