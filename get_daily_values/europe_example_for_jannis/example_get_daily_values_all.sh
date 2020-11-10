@@ -9,7 +9,7 @@
 #~ #SBATCH --exclusive
 
 # do not forget to load the module required (i.e. cdo)
-. load_my_miniconda_and_my_default_env.sh
+. /quanta1/home/sutan101/load_my_miniconda_and_my_default_env.sh
 
 # set the folder where you want to store daily files (note that these daily files will still need further processing)
 OUTPUT_FOLDER="/scratch/depfg/sutan101/test_arise_meteo_europe_demo/daily_before_remapcon/"
