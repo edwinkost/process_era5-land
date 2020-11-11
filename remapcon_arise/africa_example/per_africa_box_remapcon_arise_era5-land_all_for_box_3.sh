@@ -1,6 +1,15 @@
 #!/bin/bash
 
+#PBS -l walltime=24:00:00
+#PBS -l select=1:ncpus=8:mem=64gb
+
 set -x
+
+cd $HOME
+
+# load the required modules
+. load_all_default.sh
+
 
 OUT_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_example/Africa-box3/daily_after_remapcon/merged_1981-1989/"
 
