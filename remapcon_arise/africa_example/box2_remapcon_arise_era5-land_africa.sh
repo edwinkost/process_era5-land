@@ -9,6 +9,9 @@ set -x
 # load the required modules
 . /rds/general/user/esutanud/home/load_all_default.sh
 
+# go to the folder where the scripts are stored
+cd /rds/general/user/esutanud/home/github/edwinkost/process_era5-land/remapcon_arise/africa_example/
+
 
 OUT_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_example/Africa-box2/daily_after_remapcon/merged_1981-1989_with_jobs/"
 
