@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #PBS -l walltime=24:00:00
-#PBS -l select=1:ncpus=12:mem=64gb
+#PBS -l select=1:ncpus=8:mem=64gb
 
 #PBS -N merging_africa_1981-1989
 
@@ -17,8 +17,6 @@ OUT_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_example/afri
 INP_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_example/"
 
 bash merge_grid_africa.sh ${INP_FOLDER} ${OUT_FOLDER} era5-land_daily_d2m-average &
-bash merge_grid_africa.sh ${INP_FOLDER} ${OUT_FOLDER} era5-land_daily_d2m-maximum &
-bash merge_grid_africa.sh ${INP_FOLDER} ${OUT_FOLDER} era5-land_daily_d2m-minimum &
 
 bash merge_grid_africa.sh ${INP_FOLDER} ${OUT_FOLDER} era5-land_daily_fal-average &
 
@@ -28,9 +26,14 @@ bash merge_grid_africa.sh ${INP_FOLDER} ${OUT_FOLDER} era5-land_daily_t2m-averag
 bash merge_grid_africa.sh ${INP_FOLDER} ${OUT_FOLDER} era5-land_daily_t2m-maximum &
 bash merge_grid_africa.sh ${INP_FOLDER} ${OUT_FOLDER} era5-land_daily_t2m-minimum &
 
-bash merge_grid_africa.sh ${INP_FOLDER} ${OUT_FOLDER} era5-land_daily_total-preci &
 bash merge_grid_africa.sh ${INP_FOLDER} ${OUT_FOLDER} era5-land_daily_total-ssrad &
 bash merge_grid_africa.sh ${INP_FOLDER} ${OUT_FOLDER} era5-land_daily_wind10m-avg &
+
+wait
+
+bash merge_grid_africa.sh ${INP_FOLDER} ${OUT_FOLDER} era5-land_daily_d2m-maximum &
+bash merge_grid_africa.sh ${INP_FOLDER} ${OUT_FOLDER} era5-land_daily_d2m-minimum &
+bash merge_grid_africa.sh ${INP_FOLDER} ${OUT_FOLDER} era5-land_daily_total-preci &
 
 wait
 
