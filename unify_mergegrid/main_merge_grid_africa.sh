@@ -7,6 +7,12 @@
 
 set -x
 
+# load the required modules
+. /rds/general/user/esutanud/home/load_all_default.sh
+
+# go to the folder where the scripts are stored
+cd /rds/general/user/esutanud/home/github/edwinkost/process_era5-land/unify_mergegrid/
+
 OUT_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_example/africa_merged/1981-1989/"
 INP_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_example/"
 
