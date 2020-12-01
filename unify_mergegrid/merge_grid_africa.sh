@@ -54,22 +54,22 @@ BOX3_FILENAME=${MAIN_INPUT_FOLDER}"/Africa-box3/daily_after_remapcon/merged_1981
 cdo -L -mergegrid ${BOX3_FILENAME} -mergegrid ${BOX1_FILENAME} ${BOX2_FILENAME} ${OUT_FILENAME} &
 
 
-# merging monthly files 
+#~ # merging monthly files 
 
-MONTHLY_OUTPUT_FOLDER=${OUTPUT_FOLDER}/monthly_but_merged_from_boxes/
-mkdir -p ${MONTHLY_OUTPUT_FOLDER}
+#~ MONTHLY_OUTPUT_FOLDER=${OUTPUT_FOLDER}/monthly_but_merged_from_boxes/
+#~ mkdir -p ${MONTHLY_OUTPUT_FOLDER}
 
-INP_FILENAME="era5-land_daily_total-preci/era5-land_daily_total-preci_rempacon-150-arcsec_monthly.nc"
-INP_FILENAME=$3/$3_rempacon-150-arcsec_monthly.nc
+#~ INP_FILENAME="era5-land_daily_total-preci/era5-land_daily_total-preci_rempacon-150-arcsec_monthly.nc"
+#~ INP_FILENAME=$3/$3_rempacon-150-arcsec_monthly.nc
 
-OUT_FILENAME=${MONTHLY_OUTPUT_FOLDER}/"africa_era5-land_daily_total-preci_rempacon-150-arcsec_monthly.nc"
-OUT_FILENAME=${MONTHLY_OUTPUT_FOLDER}/africa_$3_rempacon-150-arcsec_monthly.nc
+#~ OUT_FILENAME=${MONTHLY_OUTPUT_FOLDER}/"africa_era5-land_daily_total-preci_rempacon-150-arcsec_monthly.nc"
+#~ OUT_FILENAME=${MONTHLY_OUTPUT_FOLDER}/africa_$3_rempacon-150-arcsec_monthly.nc
 
-BOX1_FILENAME=${MAIN_INPUT_FOLDER}"/Africa-box1/daily_after_remapcon/merged_1981-1989_with_jobs/150_arcsec/${INP_FILENAME}"
-BOX2_FILENAME=${MAIN_INPUT_FOLDER}"/Africa-box2/daily_after_remapcon/merged_1981-1989_with_jobs/150_arcsec/${INP_FILENAME}"
-BOX3_FILENAME=${MAIN_INPUT_FOLDER}"/Africa-box3/daily_after_remapcon/merged_1981-1989_with_jobs/150_arcsec/${INP_FILENAME}"
+#~ BOX1_FILENAME=${MAIN_INPUT_FOLDER}"/Africa-box1/daily_after_remapcon/merged_1981-1989_with_jobs/150_arcsec/${INP_FILENAME}"
+#~ BOX2_FILENAME=${MAIN_INPUT_FOLDER}"/Africa-box2/daily_after_remapcon/merged_1981-1989_with_jobs/150_arcsec/${INP_FILENAME}"
+#~ BOX3_FILENAME=${MAIN_INPUT_FOLDER}"/Africa-box3/daily_after_remapcon/merged_1981-1989_with_jobs/150_arcsec/${INP_FILENAME}"
 
-cdo -L -mergegrid ${BOX3_FILENAME} -mergegrid ${BOX1_FILENAME} ${BOX2_FILENAME} ${OUT_FILENAME} &
+#~ cdo -L -mergegrid ${BOX3_FILENAME} -mergegrid ${BOX1_FILENAME} ${BOX2_FILENAME} ${OUT_FILENAME} &
 
 wait
 
