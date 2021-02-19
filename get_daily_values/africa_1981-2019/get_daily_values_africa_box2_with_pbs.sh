@@ -7,8 +7,11 @@
 
 #PBS -N get_daily_box_2
 
-# box2
-#####################
+
+# load software
+. /rds/general/user/esutanud/home/load_all_default.sh
+ 
+
 
 MAIN_HOURLY_SOURCE_DIR="/rds/general/user/esutanud/projects/arise/live/Africa/Africa-box2/"
 OUTPUT_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_1981-2019/africa-box2/daily_before_remapcon/"
