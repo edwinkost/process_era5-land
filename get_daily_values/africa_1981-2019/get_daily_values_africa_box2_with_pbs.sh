@@ -12,9 +12,11 @@
 . /rds/general/user/esutanud/home/load_all_default.sh
  
 
-
 MAIN_HOURLY_SOURCE_DIR="/rds/general/user/esutanud/projects/arise/live/Africa/Africa-box2/"
 OUTPUT_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_1981-2019/africa-box2/daily_before_remapcon/"
+
+# goto the working directory
+cd /rds/general/user/esutanud/home/github/edwinkost/process_era5-land/get_daily_values/africa_1981-2019/
 
 bash get_daily_values_all.sh ${MAIN_HOURLY_SOURCE_DIR} ${OUTPUT_FOLDER} 1981
 bash get_daily_values_all.sh ${MAIN_HOURLY_SOURCE_DIR} ${OUTPUT_FOLDER} 1982
