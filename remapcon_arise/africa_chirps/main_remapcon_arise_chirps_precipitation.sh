@@ -10,7 +10,7 @@ set -x
 #~ drwxr-xr-x 30 sutan101 depfg    29 Feb 23 07:37 ..
 #~ -rw-r-----  1 sutan101 depfg  782G Feb 23 13:34 chirps-v2.0.1981-2020.days_p05.nc
 
-INP_FOLDER="/scratch-shared/edwinhs/meteo_arise/tanzania/source_icl_downloaded_2020-03-02/"
+INP_FOLDER="/scratch/depfg/sutan101/data/chirps/"
 
 MAIN_OUT_FOLDER="/scratch/depfg/sutan101/meteo_arise/version_2021-02-XX/chirps_africa/"
 mkdir -p ${MAIN_OUT_FOLDER}
