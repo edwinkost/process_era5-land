@@ -8,7 +8,7 @@
 #PBS -l walltime=48:00:00
 #PBS -l select=1:ncpus=16:mem=62gb
 
-#PBS -N remap_box_1
+#PBS -N remap_box1
 
 
 set -x
@@ -18,23 +18,9 @@ cd $HOME
 . load_all_default.sh
 
 
-INP_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_1981-2019/africa-box1/daily_before_remapcon/merged_1981-2019/"
+INP_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_1981-2019/africa-box3/daily_before_remapcon/merged_1981-2019/"
 
-#~ esutanud@login-5:/rds/general/user/esutanud/ephemeral/meteo_arise/africa_1981-2019/africa-box1/daily_before_remapcon/merged_1981-2019$ ls -lah *.nc
-#~ -rw------- 1 esutanud hpc-ec407 48G Mar  4 08:20 era5-land_daily_d2m-average_1981-2019.nc
-#~ -rw------- 1 esutanud hpc-ec407 48G Mar  4 08:20 era5-land_daily_d2m-maximum_1981-2019.nc
-#~ -rw------- 1 esutanud hpc-ec407 48G Mar  4 08:20 era5-land_daily_d2m-minimum_1981-2019.nc
-#~ -rw------- 1 esutanud hpc-ec407 48G Mar  4 08:20 era5-land_daily_fal-average_1981-2019.nc
-#~ -rw------- 1 esutanud hpc-ec407 48G Mar  4 08:20 era5-land_daily_spressu-avg_1981-2019.nc
-#~ -rw------- 1 esutanud hpc-ec407 48G Mar  4 08:20 era5-land_daily_t2m-average_1981-2019.nc
-#~ -rw------- 1 esutanud hpc-ec407 48G Mar  4 08:20 era5-land_daily_t2m-maximum_1981-2019.nc
-#~ -rw------- 1 esutanud hpc-ec407 48G Mar  4 08:20 era5-land_daily_t2m-minimum_1981-2019.nc
-#~ -rw------- 1 esutanud hpc-ec407 48G Mar  4 08:20 era5-land_daily_total-preci_1981-2019.nc
-#~ -rw------- 1 esutanud hpc-ec407 48G Mar  4 08:20 era5-land_daily_total-ssrad_1981-2019.nc
-#~ -rw------- 1 esutanud hpc-ec407 48G Mar  4 08:20 era5-land_daily_wind10m-avg_1981-2019.nc
-
-
-OUT_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_1981-2019/africa-box1/daily_after_remapcon/merged_1981-2019/"
+OUT_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_1981-2019/africa-box3/daily_after_remapcon/merged_1981-2019/"
 
 # making output folder 
 mkdir -p ${OUT_FOLDER}
