@@ -8,7 +8,7 @@
 #PBS -l walltime=48:00:00
 #PBS -l select=1:ncpus=16:mem=62gb
 
-#PBS -N remap_box1
+#PBS -N remap_box3
 
 
 set -x
