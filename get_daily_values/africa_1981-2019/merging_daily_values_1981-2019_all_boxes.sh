@@ -10,6 +10,10 @@
 
 #PBS -N day_merge_all_boxes
 
+# send emails if aborted, began and ended
+#PBS -M edwinkost@gmail.com
+#PBS -M abe
+
 
 # load software
 . /rds/general/user/esutanud/home/load_all_default.sh
