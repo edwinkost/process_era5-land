@@ -11,9 +11,9 @@
 #PBS -N day_merge_all_boxes
 
 
-# send emails if aborted, began and ended
-#PBS -M edwinkost@gmail.com
-#PBS -m abe
+#~ # send emails if aborted, began and ended (not always supported)
+#~ #PBS -M edwinkost@gmail.com
+#~ #PBS -m abe
 
 
 # load software
