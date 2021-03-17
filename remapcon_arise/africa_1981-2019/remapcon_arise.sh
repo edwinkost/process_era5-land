@@ -58,7 +58,8 @@ cdo -L -griddes -invertlat clone.nc > griddes_invertlat_clone.txt
 
 # remapcon
 #~ cdo -L -setrtoc,-inf,0,0 -settime,00:00:00 -remapcon,griddes_invertlat_clone.txt -setrtoc,-inf,0,0 ${INPUT_FILE} ${OUTPUT_DAILY_FILE}
-cdo -L -settime,00:00:00 -remapcon,griddes_invertlat_clone.txt ${INPUT_FILE} ${OUTPUT_DAILY_FILE}
+#~ cdo -L -settime,00:00:00 -remapcon,griddes_invertlat_clone.txt ${INPUT_FILE} ${OUTPUT_DAILY_FILE}
+cdo -L -f nc4 -settime,00:00:00 -remapcon,griddes_invertlat_clone.txt ${INPUT_FILE} ${OUTPUT_DAILY_FILE}
 
 # calculate monthly values
 CDO_TIMESTAT_DATE='last' cdo -L -settime,00:00:00 -setunit,${MONTHLY_UNIT} -${CDOMON_OPERA} ${OUTPUT_DAILY_FILE} ${OUTPUT_MONTH_FILE}
