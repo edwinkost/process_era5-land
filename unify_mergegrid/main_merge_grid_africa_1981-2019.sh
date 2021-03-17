@@ -5,11 +5,14 @@
 
 #PBS -q express -P exp-00044
 
-#PBS -l walltime=48:00:00
-#PBS -l select=1:ncpus=16:mem=62gb
+#~ #PBS -l walltime=48:00:00
+#~ #PBS -l select=1:ncpus=16:mem=62gb
 
 #~ #PBS -l walltime=70:00:00
 #~ #PBS -l select=1:ncpus=48:mem=126gb
+
+#PBS -l walltime=48:00:00
+#PBS -l select=1:ncpus=256:mem=960gb
 
 #PBS -N mergegrid_1981-2019
 
