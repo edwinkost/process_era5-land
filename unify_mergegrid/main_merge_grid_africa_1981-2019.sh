@@ -29,7 +29,9 @@ cd /rds/general/user/esutanud/home/github/edwinkost/process_era5-land/unify_merg
 
 INP_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_1981-2019/"
 
-OUT_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_1981-2019/africa_merged/1981-2019/"
+#~ OUT_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_1981-2019/africa_merged/1981-2019/"
+
+OUT_FOLDER="/rds/general/user/esutanud/ephemeral/meteo_arise/africa_1981-2019/africa_merged/1981-2019_test_t2m_only/"
 
 
 #~ bash merge_grid_africa.sh ${INP_FOLDER} ${OUT_FOLDER} era5-land_daily_d2m-average &
